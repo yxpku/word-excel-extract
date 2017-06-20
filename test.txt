@@ -1,0 +1,16 @@
+Sub extract_word_excel()
+'''The program extract certain fields from the XPSR, E&S to the Excel Database
+
+Dim xpsr As Document, ens As Document
+Dim path_xpsr As String, path_ens As String
+Dim project_name As String, project_id As String
+
+path_xpsr = "C:\Users\wb518784\Downloads\30441_Garanti Romania_Draft EvNote_Jun 19 5 pm 2017.docx"
+
+Set xpsr = Documents.Open(path_xpsr)
+
+' extract fields
+project_name = xpsr.FormFields(2).Result
+MsgBox project_name
+
+End Sub
